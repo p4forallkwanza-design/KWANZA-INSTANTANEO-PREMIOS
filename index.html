@@ -56,6 +56,16 @@ src="https://www.facebook.com/tr?id=2192712477984557&ev=PageView&noscript=1"/>
 </noscript>    
 <!-- End Meta Pixel Code -->
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var params = window.location.search.substring(1);
+  if (!params) return;
+  document.querySelectorAll('a[href*="sellerpayon.com/checkout"]').forEach(function (link) {
+    link.href += (link.href.indexOf("?") === -1 ? "?" : "&") + params;
+  });
+});
+</script>
+
 
   <body>
     <div id="app"></div>
